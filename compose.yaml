@@ -1,0 +1,10 @@
+services:
+  api:
+    build: apps/api
+    ports:
+      - "8000:8000"
+
+  dashboard:
+    build: apps/dashboard
+    ports:
+      - "5173:5173"
