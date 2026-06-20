@@ -3,8 +3,10 @@ services:
     build: apps/api
     ports:
       - "8000:8000"
+    restart: unless-stopped
 
   dashboard:
     build: apps/dashboard
     ports:
       - "5173:5173"
+      restart: unless-stopped

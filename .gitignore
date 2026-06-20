@@ -10,6 +10,16 @@ dist/
 # Environment variables / secrets
 .env
 
+# Pihole
+services/pihole/etc-pihole/
+services/pihole/etc-dnsmasq.d/
+
+# Minecraft
+services/minecraft/*.world/
+services/minecraft/*.env
+services/minecraft/backups/
+services/minecraft/*.log
+
 # OS/editor junk
 .DS_Store
 .vscode/

@@ -1,0 +1,37 @@
+services:
+  family-server:
+    image: itzg/minecraft-bedrock-server
+    ports:
+      - "23000:19132/udp"
+    container_name: minecraft-family-server
+    volumes:
+      - ./family-server.world:/data
+    env_file:
+      - ./family.env
+    environment:
+      EULA: "TRUE"
+      ALLOW_LIST: "true"
+      SERVER_NAME: "Family Server"
+      DIFFICULTY: hard
+      GAMEMODE: survival
+      MAX_PLAYERS: "10"
+
+    restart: unless-stopped
+
+  sosa-server:
+    image: itzg/minecraft-bedrock-server
+    container_name: minecraft-sosa-server
+    ports:
+      - "23001:19132/udp"
+    volumes:
+      - ./sosa-server.world:/data
+    env_file:
+      - ./sosa.env
+    environment:
+      EULA: "TRUE"
+      ALLOW_LIST: "true"
+      SERVER_NAME: "SOSA Server"
+      DIFFICULTY: hard
+      GAMEMODE: survival
+      MAX_PLAYERS: "15"
+    restart: unless-stopped
