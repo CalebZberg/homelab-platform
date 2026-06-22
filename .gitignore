@@ -8,11 +8,14 @@ node_modules/
 dist/
 
 # Environment variables / secrets
-.env
+**/.env
 
 # Pihole
 services/pihole/etc-pihole/
 services/pihole/etc-dnsmasq.d/
+
+# Wireguard
+services/wireguard/config/
 
 # Minecraft
 services/minecraft/*.world/
